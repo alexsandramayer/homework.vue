@@ -1,0 +1,32 @@
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/general';
+
+@import 'blocks/header';
+@import 'blocks/article';
+@import 'blocks/footer';
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Jost', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+ 
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+@import 'pages/main';
+@import 'pages/blog';
