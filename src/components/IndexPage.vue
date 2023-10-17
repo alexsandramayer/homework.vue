@@ -1,0 +1,228 @@
+<template>
+    <header class="header container">
+        <div class="header__top">
+            <a href="index.html" class="logo"><img :src="logo" alt="logo"></a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__content">
+            <div class="header__content_info">
+                <h1 class="header__content_title">Let Your Home 
+                    Be Unique</h1>
+                <div class="header__content_descr">There are many variations of the passages of lorem Ipsum fromavailable, majority.</div>
+                <a href="#" class="header__content_btn">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="projects container">
+        <h2 class="projects__title">Follow Our Projects</h2>
+        <div class="projects__descr">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</div>
+        <div class="projects__items">
+            <div class="projects__item">
+                <img class="projects__item_img" id="img1" :src="project1" alt="image project1">
+                <div class="projects__item_info">
+                    <div class="projects__item_titles">
+                        <h3 class="projects__item_title">Modern Kitchan</h3>
+                        <h4 class="projects__item_subtitle">Decor / Artchitecture</h4>
+                    </div>
+                    <a href="#" class="projects__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
+                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                </div>
+                
+            </div>
+            <div class="projects__item">
+                <img class="projects__item_img" id="img2" :src="project2" alt="image project2">
+                <div class="projects__item_info">
+                    <div class="projects__item_titles">
+                        <h3 class="projects__item_title">Modern Kitchan</h3>
+                        <h4 class="projects__item_subtitle">Decor / Artchitecture</h4>
+                    </div>
+                    <a href="#" class="projects__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
+                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                </div>
+            </div>
+            <div class="projects__item">
+                <img class="projects__item_img" id="img3" :src="project3" alt="image project3">
+                <div class="projects__item_info">
+                    <div class="projects__item_titles">
+                        <h3 class="projects__item_title">Modern Kitchan</h3>
+                        <h4 class="projects__item_subtitle">Decor / Artchitecture</h4>
+                    </div>
+                    <a href="#" class="projects__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
+                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                </div>
+            </div>
+            <div class="projects__item">
+                <img class="projects__item_img" id="img4" :src="project4" alt="image project4">
+                <div class="projects__item_info">
+                    <div class="projects__item_titles">
+                        <h3 class="projects__item_title">Modern Kitchan</h3>
+                        <h4 class="projects__item_subtitle">Decor / Artchitecture</h4>
+                    </div>
+                    <a href="#" class="projects__item_btn"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                        <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
+                        <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="counter">
+        <div class="container">
+            <div class="counter__items">
+                <div class="counter__item">
+                    <div class="counter__number">12</div>
+                    <div class="counter__descr">Years Of Experiance</div>
+                </div>
+                <div class="counter__line"></div>
+                <div class="counter__item">
+                    <div class="counter__number">85</div>
+                    <div class="counter__descr">Success Project</div>
+                </div>
+                <div class="counter__line"></div>
+                <div class="counter__item">
+                    <div class="counter__number">15</div>
+                    <div class="counter__descr">Active Project</div>
+                </div>
+                <div class="counter__line"></div>
+                <div class="counter__item">
+                    <div class="counter__number">95</div>
+                    <div class="counter__descr">Happy CUstomers</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="blog__main container">
+        <h2 class="blog__main_title">Articles & News</h2>
+        <div class="blog__main_descr">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</div>
+
+        <div class="articles" id="articles">
+            <article class="article" v-for="(item, index) in articles.slice(0, 3)" :key="index">
+                <img class="article__img" :src="item.img" alt="article img">
+                <div class="article__tag">{{ item.tag }} </div>
+                <div class="article__info">
+                    <h3 class="article_title">{{ item.title }}</h3>
+                        
+                    <div class="article__info_bottom">
+                        <div class="article__info_data">{{ item.data }}</div>
+                        
+                        <a href="blog_details.html" class="article__info_btn"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                        <circle cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
+                        <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></a>
+                    </div>
+                </div>
+            </article>
+           
+            
+
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <div class="footer__info">
+            <a href="#" class="logo"><img :src="logo" alt="logo"></a>
+            <div class="footer__descr">It is a long established fact that a reader will be distracted lookings.</div>
+            <div class="footer__social">
+                <a class="footer__social_twitter" href="#">
+                    <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>twitter</title> <path d="M30.917 6.728c-1.026 0.465-2.217 0.805-3.464 0.961l-0.061 0.006c1.268-0.771 2.222-1.952 2.687-3.354l0.013-0.044c-1.124 0.667-2.431 1.179-3.82 1.464l-0.082 0.014c-1.123-1.199-2.717-1.946-4.485-1.946-3.391 0-6.14 2.749-6.14 6.14 0 0.496 0.059 0.979 0.17 1.441l-0.008-0.042c-5.113-0.254-9.613-2.68-12.629-6.366l-0.025-0.031c-0.522 0.873-0.831 1.926-0.831 3.052 0 0.013 0 0.026 0 0.039v-0.002c0 0.001 0 0.003 0 0.005 0 2.12 1.075 3.989 2.709 5.093l0.022 0.014c-1.026-0.034-1.979-0.315-2.811-0.785l0.031 0.016v0.075c0 0.001 0 0.002 0 0.002 0 2.961 2.095 5.434 4.884 6.014l0.040 0.007c-0.484 0.135-1.040 0.212-1.614 0.212-0.406 0-0.802-0.039-1.186-0.113l0.039 0.006c0.813 2.459 3.068 4.212 5.739 4.264l0.006 0c-2.072 1.638-4.721 2.627-7.602 2.627-0.005 0-0.009 0-0.014 0h0.001c-0.515-0.001-1.022-0.031-1.521-0.089l0.061 0.006c2.663 1.729 5.92 2.757 9.418 2.757 0.005 0 0.009 0 0.014 0h-0.001c0.037 0 0.082 0 0.126 0 9.578 0 17.343-7.765 17.343-17.343 0-0.039-0-0.077-0-0.116l0 0.006c0-0.262 0-0.524-0.019-0.786 1.21-0.878 2.229-1.931 3.042-3.136l0.028-0.044z"></path></g></svg></a>
+                <a class="footer__social_linkedin" href="#">
+                    <svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="7935ec95c421cee6d86eb22ecd125aef"> <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"> </path> </g> </g></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer__pages">
+            <h3 class="footer__title">Pages</h3>
+            <nav class="nav__footer">
+                <ul class="nav__list_footer">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__contact">
+            <h3 class="footer__title">Contact</h3>
+            <div class="footer__contact_adress">55 East Birchwood Ave. Brooklyn, New York 11201</div>
+            <a class="footer__contact_email">contact@interno.com</a>
+            <a class="footer__contact_tel" href="tel:1234567890">(123) 456 - 7890</a>
+
+        </div>
+    </footer>
+
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                logo: require('@/assets/images/logo__img.svg'),
+                project1: require('@/assets/images/project1__img.png'),
+                project2: require('@/assets/images/project2__img.png'),
+                project3: require('@/assets/images/project3__img.png'),
+                project4: require('@/assets/images/project4__img.png'),
+                articles: [
+                { 
+                    img: require('@/assets/images/article1__img.png'),
+                    tag: 'Kitchan Design',
+                    title: 'Let’s Get Solution For Building Construction Work',
+                    data: '26 December,2022',
+                    btn: ''
+                },
+                { 
+                    img: require('@/assets/images/article2__img.png'),
+                    tag: 'Living Design',
+                    title: 'Low Cost Latest Invented Interior DesigningIdeas',
+                    data: '22 December,2022',
+                    btn: ''
+                },
+                { 
+                    img: require('@/assets/images/article3__img.png'),
+                    tag: 'Interior Design',
+                    title: 'Best For Any Office & Business Interior Solution',
+                    data: '25 December,2022',
+                    btn: ''
+                },
+                { 
+                    img: require('@/assets/images/article4__img.png'),
+                    tag: 'Kitchan Design',
+                    title: 'Let’s Get Solution For Building Construction Work',
+                    data: '26 December,2022',
+                    btn: ''
+                },
+                { 
+                    img: require('@/assets/images/article5__img.png'),
+                    tag: 'Living Design',
+                    title: 'Low Cost Latest Invented Interior DesigningIdeas',
+                    data: '22 December,2022',
+                    btn: ''
+                },
+                { 
+                    img: require('@/assets/images/article6__img.png'),
+                    tag: 'Interior Design',
+                    title: 'Best For Any Office & Business Interior Solution',
+                    data: '25 December,2022',
+                    btn: ''
+                },
+                ]
+
+            }
+        }
+    }
+</script>
+
