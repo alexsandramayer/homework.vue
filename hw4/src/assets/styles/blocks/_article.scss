@@ -1,0 +1,84 @@
+.articles{
+    margin-top: 52px;
+    display: flex;
+    gap: 27px;
+}
+.articles__blog{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.article{
+    position: relative;
+    box-sizing: border-box;
+    width: 382px;
+    min-height: 521px;
+    padding: 21px;
+    border-radius: 62px;
+    border: 1px solid #E7E7E7;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    transition: all 0.8s;
+    &__img{
+        width: 340px;
+        height: 289px;
+        border-radius: 45px 45px 0px 0px;
+    }
+    &__tag{
+        position: absolute;
+        box-sizing: border-box;
+        width: 124px;
+        height: 41px;
+        border-radius: 8px 8px 8px 0px;
+        background: $colorBase;
+        padding: 8px ;
+        top: 249px;
+        left: 41px;
+        text-align: center;
+        color: $colorSubtitle;
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%; 
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+    }
+    &__info{
+        margin-top: 21px;
+        &_title{
+            max-width: 305px;
+            color: $colorTitle;
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 125%; 
+            letter-spacing: 0.5px;
+        }
+        &_bottom{
+            margin-top: 30px;
+            min-height: 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_data{
+            color: $colorSubtitle;
+            font-family: Jost;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%; 
+            letter-spacing: 0.16px;
+            text-transform: capitalize;
+        }
+        &_btn{
+            width: 52px;
+            height: 52px;
+            
+        }
+    }
+    &:hover{
+        background-color: #F4F0EC;
+        .article__info_btn circle{
+            fill: $colorBase;
+        }
+    }
+}
